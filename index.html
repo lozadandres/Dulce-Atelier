@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dulce Atelier | Haute Parfumerie</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-brand-cream text-brand-ink selection:bg-brand-gold selection:text-white overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-brand-cream/60 backdrop-blur-xl border-b border-brand-ink/5">
+      <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+        <div class="flex items-center gap-3 group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          <div class="w-12 h-12 rounded-full bg-brand-ink flex items-center justify-center text-white group-hover:bg-brand-gold transition-colors duration-500">
+            <img src="Logo.jpg" alt="Logo" style="border-radius: 20px;">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-2xl font-bold tracking-tight leading-none">Dulce Atelier</span>
+            <span class="text-[10px] uppercase tracking-[0.4em] text-brand-gold font-bold">Haute Parfumerie</span>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-10 text-[11px] uppercase tracking-[0.25em] font-bold">
+          <a href="#inicio" class="hover:text-brand-gold transition-colors">Inicio</a>
+          <a href="#nosotros" class="hover:text-brand-gold transition-colors">La Maison</a>
+          <a href="#coleccion" class="hover:text-brand-gold transition-colors">Fragancias</a>
+          <a href="#beneficios" class="hover:text-brand-gold transition-colors">Filosofía</a>
+          <button class="bg-brand-ink text-white px-8 py-3 rounded-full hover:bg-brand-gold transition-all shadow-xl shadow-brand-ink/10">
+            Boutique
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="menu-toggle" class="md:hidden p-2 text-brand-ink" aria-label="Toggle menu">
+          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-brand-cream pt-32 px-10 md:hidden translate-x-full transition-transform duration-500 ease-in-out">
+      <div class="flex flex-col gap-8 text-4xl font-serif italic">
+        <a href="#inicio" class="mobile-link hover:text-brand-gold">Inicio</a>
+        <a href="#nosotros" class="mobile-link hover:text-brand-gold">La Maison</a>
+        <a href="#coleccion" class="mobile-link hover:text-brand-gold">Fragancias</a>
+        <a href="#beneficios" class="mobile-link hover:text-brand-gold">Filosofía</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center overflow-hidden pt-24">
+      <div id="hero-bg" class="absolute inset-0 z-0 transition-transform duration-100 ease-out">
+        <img 
+          src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&q=80&w=1920" 
+          alt="Luxury Fragrance Background" 
+          class="w-full h-full object-cover opacity-40"
+          referrerpolicy="no-referrer"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-cream/0 via-brand-cream/40 to-brand-cream"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-fade-in-up">
+            <div class="flex items-center gap-4 mb-8">
+              <div class="h-[1px] w-12 bg-brand-gold"></div>
+              <span class="text-[11px] uppercase tracking-[0.5em] text-brand-gold font-bold">Inspiración Divina</span>
+            </div>
+            <h1 class="text-7xl md:text-[120px] font-serif font-light leading-[0.85] mb-10 tracking-tighter">
+              Muse <br />
+              <span class="text-editorial text-brand-olive ml-12 md:ml-24">Atelier</span>
+            </h1>
+            <p class="text-lg text-brand-ink/70 max-w-md mb-12 leading-relaxed font-medium">
+              Fragancias de autor diseñadas para la mujer que encuentra su propia inspiración. Una experiencia sensorial que trasciende el aroma.
+            </p>
+            <div class="flex flex-wrap gap-6">
+              <button class="bg-brand-ink text-white px-10 py-5 rounded-full flex items-center gap-3 hover:bg-brand-gold transition-all duration-500 group shadow-2xl shadow-brand-ink/20">
+                Descubrir Muse <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-2 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+              <button class="px-10 py-5 rounded-full border border-brand-ink/10 font-bold hover:bg-white transition-all flex items-center gap-3">
+                Nuestra Historia
+              </button>
+            </div>
+          </div>
+
+          <div class="relative hidden lg:block animate-fade-in-scale">
+            <div class="relative z-10 aspect-[4/5] rounded-[60px] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border-[12px] border-white animate-float">
+              <img 
+                src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800" 
+                alt="Muse Signature Scent" 
+                class="w-full h-full object-cover"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-gold/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-brand-olive/5 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 -right-20 glass-card p-6 rounded-3xl max-w-[200px] -rotate-6 bg-white/90 backdrop-blur-2xl border border-brand-gold/20">
+              <p class="text-[10px] uppercase tracking-widest text-brand-gold font-bold mb-2">Nota de Salida</p>
+              <p class="font-serif italic text-lg leading-tight text-brand-ink">Vainilla de Madagascar & Orquídea</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- La Maison Section -->
+    <section id="nosotros" class="py-32 bg-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-24 items-center mb-32">
+          <div class="relative animate-fade-in-up">
+            <div class="mask-oval aspect-[3/4] bg-brand-cream overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800" 
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" 
+                referrerpolicy="no-referrer" 
+                alt="Creadoras Dulce Atelier"
+              />
+            </div>
+            <div class="absolute -bottom-12 -right-12 glass-card p-8 rounded-3xl max-w-[280px] shadow-2xl bg-white/90 backdrop-blur-2xl border border-brand-gold/20">
+              <h4 class="font-serif italic text-2xl mb-4 text-brand-ink">Nuestra Visión</h4>
+              <p class="text-sm text-brand-ink leading-relaxed">
+                "Demostrar que una fragancia puede ser más que un aroma: es una forma de expresión personal y una fuente de inspiración propia."
+              </p>
+            </div>
+          </div>
+          
+          <div class="space-y-10 animate-fade-in-scale">
+            <div>
+              <span class="text-[11px] uppercase tracking-[0.5em] text-brand-gold font-bold mb-4 block">Historia & Equipo</span>
+              <h2 class="text-6xl font-serif leading-tight mb-8">El Alma detrás de Muse</h2>
+              <p class="text-xl text-brand-ink/70 leading-relaxed font-medium mb-6">
+                Dulce Atelier nace de la unión creativa de:
+              </p>
+              <div class="flex flex-wrap gap-4 mb-10">
+                <span class="px-6 py-2 rounded-full border border-brand-gold/20 text-brand-gold font-serif italic text-lg">Sara Calles</span>
+                <span class="px-6 py-2 rounded-full border border-brand-gold/20 text-brand-gold font-serif italic text-lg">Valentina Candamil</span>
+                <span class="px-6 py-2 rounded-full border border-brand-gold/20 text-brand-gold font-serif italic text-lg">Valentina Pinilla</span>
+              </div>
+              <p class="text-brand-ink/60 leading-relaxed">
+                Unidas por el deseo de crear algo diferente, decidimos desarrollar un proyecto que combinara innovación, belleza y experiencia sensorial. Inspiradas en las musas de la mitología griega, creamos una línea que recuerda a cada mujer que ella misma es su propia fuente de inspiración.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problem & Solution -->
+        <div class="bg-brand-ink text-white rounded-[60px] p-12 md:p-24 relative overflow-hidden animate-fade-in-up">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 rounded-full blur-3xl"></div>
+          <div class="relative z-10 grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+              <h3 class="text-sm uppercase tracking-[0.5em] text-brand-gold font-bold mb-8">El Desafío del Mercado</h3>
+              <h4 class="text-5xl font-serif mb-10 leading-tight">¿Por qué muchas mujeres evitan los perfumes diarios?</h4>
+              <div class="space-y-6">
+                <div class="flex items-center gap-4 text-white/60">
+                  <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
+                  <p class="text-lg font-light italic">Aromas demasiado fuertes o invasivos.</p>
+                </div>
+                <div class="flex items-center gap-4 text-white/60">
+                  <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
+                  <p class="text-lg font-light italic">Fragancias excesivamente dulces que resultan incómodas.</p>
+                </div>
+                <div class="flex items-center gap-4 text-white/60">
+                  <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
+                  <p class="text-lg font-light italic">Poca duración en la piel durante el día.</p>
+                </div>
+                <div class="flex items-center gap-4 text-white/60">
+                  <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
+                  <p class="text-lg font-light italic">Falta de productos complementarios para prolongar el aroma.</p>
+                </div>
+              </div>
+            </div>
+            <div class="glass-card p-12 rounded-[40px] border-white/10">
+              <h3 class="text-sm uppercase tracking-[0.5em] text-brand-gold font-bold mb-8">Nuestra Solución</h3>
+              <h4 class="text-4xl font-serif mb-8 italic">El Kit Muse: Una Experiencia Completa</h4>
+              <p class="text-white/70 leading-relaxed mb-8">
+                Muse soluciona estos problemas ofreciendo fragancias equilibradas y kits que combinan <strong>perfume + crema hidratante</strong>.
+              </p>
+              <ul class="space-y-6">
+                <li class="flex gap-4">
+                  <div class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
+                  </div>
+                  <p class="text-sm text-white/80"><strong class="text-white">Fijación Superior:</strong> La crema ayuda a fijar la fragancia por más tiempo.</p>
+                </li>
+                <li class="flex gap-4">
+                  <div class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+                  </div>
+                  <p class="text-sm text-white/80"><strong class="text-white">Hidratación:</strong> Cuidado de la piel mientras disfrutas de tu aroma favorito.</p>
+                </li>
+                <li class="flex gap-4">
+                  <div class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                  </div>
+                  <p class="text-sm text-white/80"><strong class="text-white">Equilibrio:</strong> Notas elegantes y suaves para el uso diario.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fragrance Showcase -->
+    <section id="coleccion" class="py-32 bg-brand-cream">
+      <div class="max-w-7xl mx-auto px-6 mb-24 text-center animate-fade-in-up">
+        <span class="text-[11px] uppercase tracking-[0.5em] text-brand-gold font-bold mb-4 block">Colección Signature</span>
+        <h2 class="text-7xl font-serif mb-8">Las Cuatro Musas</h2>
+        <div class="h-[1px] w-24 bg-brand-gold mx-auto"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-24 items-start">
+          <!-- Left: Product Image -->
+          <div class="sticky top-32 animate-fade-in-up">
+            <div id="fragrance-display" class="relative transition-all duration-700">
+              <div id="fragrance-bg" class="absolute inset-0 bg-[#FDF5E6] rounded-[60px] blur-3xl opacity-50 -z-10 scale-110"></div>
+              <div class="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl border-8 border-white">
+                <img 
+                  id="fragrance-img"
+                  src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800" 
+                  alt="Vainilla Mose" 
+                  class="w-full h-full object-cover transition-opacity duration-300"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              
+              <!-- Floating Note Labels -->
+              <div class="absolute top-12 -left-12 glass-card p-6 rounded-3xl bg-white/90 backdrop-blur-2xl border border-brand-gold/20 animate-fade-in-scale">
+                <p class="text-[9px] uppercase tracking-widest text-brand-gold font-bold mb-1">Top</p>
+                <p id="note-top" class="font-serif italic text-brand-ink">Flor de Vainilla, Orquídea Blanca</p>
+              </div>
+              
+              <div class="absolute bottom-12 -right-12 glass-card p-6 rounded-3xl bg-white/90 backdrop-blur-2xl border border-brand-gold/20 animate-fade-in-scale" style="animation-delay: 0.5s;">
+                <p class="text-[9px] uppercase tracking-widest text-brand-gold font-bold mb-1">Base</p>
+                <p id="note-base" class="font-serif italic text-brand-ink">Almizcle Blanco, Sándalo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Editorial Content -->
+          <div class="space-y-12">
+            <div id="fragrance-list" class="flex flex-col gap-4">
+              <!-- Fragrance items will be injected here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="beneficios" class="py-32 bg-brand-ink text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#C5A059,transparent_70%)]"></div>
+      </div>
+      
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-24 items-center">
+          <div class="animate-fade-in-up">
+            <h2 class="text-sm uppercase tracking-[0.5em] text-brand-gold font-bold mb-8">El Ritual Muse</h2>
+            <h3 class="text-6xl font-serif leading-tight mb-12">Más que un Aroma, una Forma de Expresión</h3>
+            
+            <div class="space-y-12">
+              <div class="flex gap-8 group">
+                <span class="text-3xl font-serif italic text-brand-gold opacity-50 group-hover:opacity-100 transition-opacity">01</span>
+                <div>
+                  <h4 class="text-2xl font-serif mb-3 italic">Capas de Fragancia</h4>
+                  <p class="text-white/50 leading-relaxed max-w-md">Nuestra técnica exclusiva combina hidratación y aroma para una experiencia que dura todo el día.</p>
+                </div>
+              </div>
+              <div class="flex gap-8 group">
+                <span class="text-3xl font-serif italic text-brand-gold opacity-50 group-hover:opacity-100 transition-opacity">02</span>
+                <div>
+                  <h4 class="text-2xl font-serif mb-3 italic">Esencias Equilibradas</h4>
+                  <p class="text-white/50 leading-relaxed max-w-md">Diseñadas para acompañar tu presencia, no para dominarla. Elegancia en cada nota.</p>
+                </div>
+              </div>
+              <div class="flex gap-8 group">
+                <span class="text-3xl font-serif italic text-brand-gold opacity-50 group-hover:opacity-100 transition-opacity">03</span>
+                <div>
+                  <h4 class="text-2xl font-serif mb-3 italic">Autenticidad Pura</h4>
+                  <p class="text-white/50 leading-relaxed max-w-md">Cada fragancia está pensada para resaltar lo que ya existe en ti, no para ocultarlo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative animate-fade-in-scale">
+            <div class="aspect-square rounded-full border border-white/10 p-12 animate-float">
+              <div class="w-full h-full rounded-full border border-white/20 p-12">
+                <div class="w-full h-full rounded-full overflow-hidden shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800" 
+                    class="w-full h-full object-cover" 
+                    alt="Ritual Muse"
+                    referrerpolicy="no-referrer" 
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+              <div class="absolute top-0 left-1/4 w-4 h-4 bg-brand-gold rounded-full blur-sm animate-pulse"></div>
+              <div class="absolute bottom-1/4 right-0 w-3 h-3 bg-brand-gold rounded-full blur-sm animate-pulse delay-700"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-cream pt-32 pb-12 border-t border-brand-ink/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col items-center text-center mb-24">
+          <div class="w-20 h-20 rounded-full bg-brand-ink flex items-center justify-center text-white mb-10 shadow-2xl">
+            <img src="Logo.jpg" alt="Logo" style="border-radius: 20px;">
+          </div>
+          <h2 class="text-7xl font-serif italic mb-8 tracking-tighter">Dulce Atelier</h2>
+          <p class="text-brand-gold uppercase tracking-[0.6em] text-xs font-bold mb-12">Haute Parfumerie & Beauty</p>
+          
+          <div class="flex gap-12 text-[11px] uppercase tracking-[0.3em] font-bold">
+            <a href="#" class="hover:text-brand-gold transition-colors">Instagram</a>
+            <a href="#" class="hover:text-brand-gold transition-colors">Facebook</a>
+            <a href="#" class="hover:text-brand-gold transition-colors">Pinterest</a>
+          </div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-12 py-12 border-y border-brand-ink/5 mb-12">
+          <div class="text-center md:text-left">
+            <h4 class="text-[10px] uppercase tracking-widest font-bold text-brand-gold mb-4">Ubicación</h4>
+            <p class="text-sm font-medium">Atelier Central, Medellín</p>
+            <p class="text-sm text-brand-ink/50">Colombia</p>
+          </div>
+          <div class="text-center">
+            <h4 class="text-[10px] uppercase tracking-widest font-bold text-brand-gold mb-4">Contacto</h4>
+            <p class="text-sm font-medium">maison@dulceatelier.com</p>
+            <p class="text-sm text-brand-ink/50">+57 (300) 000-0000</p>
+          </div>
+          <div class="text-center md:text-right">
+            <h4 class="text-[10px] uppercase tracking-widest font-bold text-brand-gold mb-4">Newsletter</h4>
+            <div class="flex items-center justify-center md:justify-end gap-2">
+              <input type="email" placeholder="Tu email" class="bg-transparent border-b border-brand-ink/20 py-1 text-sm focus:outline-none focus:border-brand-gold transition-colors" />
+              <button class="text-brand-gold hover:translate-x-1 transition-transform" aria-label="Suscribirse"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-brand-ink/40 font-bold">
+          <p>© 2026 Dulce Atelier. Todos los derechos reservados.</p>
+          <div class="flex gap-10">
+            <a href="#" class="hover:text-brand-gold transition-colors">Privacidad</a>
+            <a href="#" class="hover:text-brand-gold transition-colors">Términos</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
